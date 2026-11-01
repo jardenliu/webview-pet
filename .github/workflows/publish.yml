@@ -53,5 +53,16 @@ jobs:
         run: bun test tests/
 
       # prepublishOnly (bun run build && bun test tests/) runs automatically here
+      # Prereleases (x.y.z-alpha.N) go to their own dist-tag (alpha/beta/rc…)
+      # so `npm install webview-pet` keeps resolving to the latest stable.
       - name: Publish
-        run: npm publish
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if [[ "$VERSION" == *-* ]]; then
+            TAG="${VERSION#*-}"; TAG="${TAG%%.*}"
+            echo "Publishing prerelease $VERSION to dist-tag @$TAG"
+            npm publish --tag "$TAG"
+          else
+            echo "Publishing stable $VERSION to dist-tag @latest"
+            npm publish
+          fi
