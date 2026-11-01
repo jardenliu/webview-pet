@@ -1,0 +1,3 @@
+[test]
+# Keep discovery inside tests/ so the vendored reference project is never scanned.
+root = "./tests"

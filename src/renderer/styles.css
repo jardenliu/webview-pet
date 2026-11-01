@@ -1,0 +1,174 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+  font-family: var(--pet-font, 'Segoe UI', 'Microsoft YaHei', sans-serif);
+}
+
+#pet-root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* ── Stage: the 16:9 animation canvas ───────────────────────────────────── */
+
+#pet-stage {
+  position: absolute;
+  will-change: transform;
+  transform: translateY(var(--bottom-pad, 0px));
+}
+
+#pet-stage.is-held {
+  transform: none;
+}
+
+#pet-stage video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: 0;
+  transition: opacity 180ms linear;
+  pointer-events: none;
+}
+
+#pet-stage video.is-front {
+  opacity: 1;
+}
+
+/* ── Hit area overlay (grab cursor feedback) ────────────────────────────── */
+
+#pet-hit {
+  position: absolute;
+  cursor: grab;
+}
+
+#pet-hit.dragging {
+  cursor: grabbing;
+}
+
+/* ── Speech bubble ──────────────────────────────────────────────────────── */
+
+#pet-bubble {
+  position: absolute;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--bubble-bottom, 72%);
+  max-width: var(--bubble-max-w, 80%);
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #222;
+  font-size: var(--pet-font-size, 15px);
+  line-height: 1.5;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  transition: opacity 250ms ease;
+  pointer-events: none;
+  text-align: center;
+  word-break: break-word;
+  z-index: 20;
+}
+
+#pet-bubble.is-on {
+  display: block;
+  opacity: 1;
+}
+
+#pet-bubble .bubble-img {
+  display: block;
+  max-width: 100%;
+  max-height: 160px;
+  margin: 6px auto 0;
+  border-radius: 10px;
+}
+
+/* ── Context menu ───────────────────────────────────────────────────────── */
+
+#pet-menu {
+  position: absolute;
+  display: none;
+  min-width: 160px;
+  padding: 6px;
+  border-radius: 12px;
+  background: rgba(252, 252, 253, 0.97);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #1c1c1e;
+  font-size: 13px;
+  z-index: 40;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+#pet-menu.is-open {
+  display: block;
+}
+
+.pet-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pet-menu-item:hover,
+.pet-menu-item.is-active {
+  background: rgba(0, 122, 255, 0.12);
+}
+
+.pet-menu-item.is-disabled {
+  opacity: 0.4;
+  cursor: default;
+  background: none;
+}
+
+.pet-menu-sep {
+  height: 1px;
+  margin: 5px 8px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.pet-menu-item .hint {
+  opacity: 0.45;
+  font-size: 11px;
+}
+
+.pet-menu-item .chev {
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+/* Cascading submenu */
+.pet-submenu {
+  position: absolute;
+  display: none;
+  min-width: 150px;
+  padding: 6px;
+  border-radius: 12px;
+  background: rgba(252, 252, 253, 0.97);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 41;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.pet-submenu.is-open {
+  display: block;
+}
