@@ -57,7 +57,12 @@ jobs:
       # so `npm install webview-pet` keeps resolving to the latest stable.
       - name: Publish
         run: |
+          NAME=$(node -p "require('./package.json').name")
           VERSION=$(node -p "require('./package.json').version")
+          if npm view "$NAME@$VERSION" version >/dev/null 2>&1; then
+            echo "$NAME@$VERSION already exists on npm, skipping publish"
+            exit 0
+          fi
           if [[ "$VERSION" == *-* ]]; then
             TAG="${VERSION#*-}"; TAG="${TAG%%.*}"
             echo "Publishing prerelease $VERSION to dist-tag @$TAG"
