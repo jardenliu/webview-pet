@@ -1,0 +1,197 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@webviewjs/webview':
+        specifier: ^0.6.0
+        version: 0.6.0
+    devDependencies:
+      '@types/bun':
+        specifier: ^1.3.0
+        version: 1.4.4
+      '@types/node':
+        specifier: ^24.0.0
+        version: 24.19.2
+      typescript:
+        specifier: ^5.6.0
+        version: 5.9.3
+
+packages:
+
+  '@types/bun@1.4.4':
+    resolution: {integrity: sha512-9wkRDXUXK124pEnAutE6n/l18j+i9GC5IAHK8TmX/2nlySETmky0OU6yL5U8pW1AoKh++AN9auDCr647BfurjQ==}
+
+  '@types/node@24.19.2':
+    resolution: {integrity: sha512-93d49wCWJkCyN87MxLpNN6KXPCwFw7bVUg79mGUV1OS40JGWwVCr8n61DXCSqz7CV6/VfPkb7xec7uP2M+QHWQ==}
+
+  '@webviewjs/webview-android-arm-eabi@0.6.0':
+    resolution: {integrity: sha512-woP0b8Ol4u2lxgPrmihvDbOfVEJtL2wW92zSOcOAWnwiQg+FYhsnfeIIkrgMnfpMYh+eOsrf/0XXtuVThzkfog==}
+    engines: {node: '>= 24'}
+    cpu: [arm]
+    os: [android]
+
+  '@webviewjs/webview-android-arm64@0.6.0':
+    resolution: {integrity: sha512-s1h75PLT1v0LeOdOVqLBVMFgpxhxGd+7dMHjk1EtrK0yWINFONDGAz/aS3p3nST1caG2Wh40Osn219bjELWCaw==}
+    engines: {node: '>= 24'}
+    cpu: [arm64]
+    os: [android]
+
+  '@webviewjs/webview-darwin-arm64@0.6.0':
+    resolution: {integrity: sha512-rIzW/ie38uLGPCVbdY6I7VDE8dr00EB6lqEcGRHeSc1mOl92tABGJTkcSyqNb+yW3OuvBwvH/eWRJwjDrg4zFw==}
+    engines: {node: '>= 24'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@webviewjs/webview-darwin-x64@0.6.0':
+    resolution: {integrity: sha512-4Bh3aKQfik7AZhK8TKGNkMQTpCUvVTKVqWGKkq9vQyl6HQP0q5+iW+LJT1Wlehpad9MNvaW/9VfXwyWDlq9HvQ==}
+    engines: {node: '>= 24'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@webviewjs/webview-freebsd-x64@0.6.0':
+    resolution: {integrity: sha512-ehTXfKsVSV7FjsM8I3kLqYfIiZ8AOvzJh1ozmDo8TWUPPe1qivUAgTAQXoQxG1oCs4rYwBIUAJ+YbsL8/KqRGQ==}
+    engines: {node: '>= 24'}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@webviewjs/webview-linux-arm-gnueabihf@0.6.0':
+    resolution: {integrity: sha512-M1TgXTTRzqcsFf6G/c1lrJ1ZalFSOAjUegHpVZNqaoWSx3daLEdjwsn8ULHtjJbIbr2dGWH2mrQsA689ViyVEQ==}
+    engines: {node: '>= 24'}
+    cpu: [arm]
+    os: [linux]
+
+  '@webviewjs/webview-linux-arm64-gnu@0.6.0':
+    resolution: {integrity: sha512-iFNqgjyexw32/ayc8vrE98BrBi2Iml+dpkvcPXcGlWVhCOr+p007BlWH9eyiNzPtwFxGPBh3u0LCmKxUStHBtw==}
+    engines: {node: '>= 24'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@webviewjs/webview-linux-ia32-gnu@0.6.0':
+    resolution: {integrity: sha512-U0LFmUrSBj5LUpeYKZ/UxILEHlVH9Fwvs9TYw9GfLL1fDlp9towO99JwqmNcePDew+JyQRzrB7WISYA2kw0A0Q==}
+    engines: {node: '>= 24'}
+    cpu: [ia32]
+    os: [linux]
+    libc: [glibc]
+
+  '@webviewjs/webview-linux-x64-gnu@0.6.0':
+    resolution: {integrity: sha512-ZDBjIpE1nJcrGQFrRos1WchqNsFsuuOOToagFGNpj0iBbLlPSiEDICUBTkHbLN/05568dutbaGvGT1bGmbn3Tg==}
+    engines: {node: '>= 24'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@webviewjs/webview-win32-arm64-msvc@0.6.0':
+    resolution: {integrity: sha512-Yw1sTMkxn/zD0VZ/FGEzSjzGHyXPJK/FtlPb4+20tMVH24uzScyu3Pkl1YmiSALS2BU9d6Fyy4SvVdgopBvyfA==}
+    engines: {node: '>= 24'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@webviewjs/webview-win32-ia32-msvc@0.6.0':
+    resolution: {integrity: sha512-eyV+pGIys62KhLM9xuqutGITSd2c/fzK0k4sA6E67jKSYuAoayqlNBgFJi0PxFe211Lvg1ue64/y666JbtZx5w==}
+    engines: {node: '>= 24'}
+    cpu: [ia32]
+    os: [win32]
+
+  '@webviewjs/webview-win32-x64-msvc@0.6.0':
+    resolution: {integrity: sha512-dXfAgWU1h3JQ3hRccYRfFal3X3k1JmYXorqojYBs9dw9hsUfIHCIdpDAeSBJce9gIFdHwliJuxrEJSHLS2WoCw==}
+    engines: {node: '>= 24'}
+    cpu: [x64]
+    os: [win32]
+
+  '@webviewjs/webview@0.6.0':
+    resolution: {integrity: sha512-W3FAOz5UP8tuvPG5N58JcqX9NB3rcAGHpS9g3+qxpzvLFlueypu+XfLhBB9hXEgzRR8D6zMVier1TDuPWs6oZg==}
+    engines: {node: '>= 24'}
+    hasBin: true
+
+  bun-types@1.4.4:
+    resolution: {integrity: sha512-yjrJh5oGX7mMPKGd19YXyIjmEuj4G4zNC30bs7PM9Az7NQ3ndF3j6hbeRdvJTRQEhJ/FYQwW0a2moweEi2hMxQ==}
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@7.24.6:
+    resolution: {integrity: sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==}
+
+  undici-types@8.12.3:
+    resolution: {integrity: sha512-EXE4ydL3S76dFb27UFjNVZHTyv/TLdATj/KUe29ptdcg6qXL48J2tZ3126E5kICj5jn781OR+XlVH1N6Mz8jbA==}
+
+snapshots:
+
+  '@types/bun@1.4.4':
+    dependencies:
+      bun-types: 1.4.4
+
+  '@types/node@24.19.2':
+    dependencies:
+      undici-types: 7.24.6
+
+  '@webviewjs/webview-android-arm-eabi@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-android-arm64@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-darwin-arm64@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-darwin-x64@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-freebsd-x64@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-linux-arm-gnueabihf@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-linux-arm64-gnu@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-linux-ia32-gnu@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-linux-x64-gnu@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-win32-arm64-msvc@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-win32-ia32-msvc@0.6.0':
+    optional: true
+
+  '@webviewjs/webview-win32-x64-msvc@0.6.0':
+    optional: true
+
+  '@webviewjs/webview@0.6.0':
+    optionalDependencies:
+      '@webviewjs/webview-android-arm-eabi': 0.6.0
+      '@webviewjs/webview-android-arm64': 0.6.0
+      '@webviewjs/webview-darwin-arm64': 0.6.0
+      '@webviewjs/webview-darwin-x64': 0.6.0
+      '@webviewjs/webview-freebsd-x64': 0.6.0
+      '@webviewjs/webview-linux-arm-gnueabihf': 0.6.0
+      '@webviewjs/webview-linux-arm64-gnu': 0.6.0
+      '@webviewjs/webview-linux-ia32-gnu': 0.6.0
+      '@webviewjs/webview-linux-x64-gnu': 0.6.0
+      '@webviewjs/webview-win32-arm64-msvc': 0.6.0
+      '@webviewjs/webview-win32-ia32-msvc': 0.6.0
+      '@webviewjs/webview-win32-x64-msvc': 0.6.0
+
+  bun-types@1.4.4:
+    dependencies:
+      '@types/node': 24.19.2
+      undici-types: 8.12.3
+
+  typescript@5.9.3: {}
+
+  undici-types@7.24.6: {}
+
+  undici-types@8.12.3: {}
