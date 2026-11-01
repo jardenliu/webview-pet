@@ -1,6 +1,6 @@
 {
   "name": "webview-pet",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "description": "Desktop pet (桌宠) library for Node.js and Bun, powered by @webviewjs/webview. Transparent always-on-top pet windows with webm alpha animation playback, drag/throw physics, speech bubbles, sleep, locks, menus and multi-pet support — fully controllable through plain functions.",
   "type": "module",
   "main": "./dist/index.js",
