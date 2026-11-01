@@ -3,3 +3,5 @@ dist/
 *.tgz
 .probe/
 references/
+docs/.vitepress/dist
+docs/.vitepress/cache
